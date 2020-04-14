@@ -1,5 +1,8 @@
 # JSON Form Generator
-LeoMoon JFG generate HTML form tags from JSON file/input. JFG supports all types and attributes of form tags.
+LeoMoon JFG generates HTML form tags from JSON file/input. JFG supports all types and attributes of form tags.
+
+## Why JSON?
+Companies change their software every couple of years. If they have too many pages and forms, they need to redesign the whole thing again. But when you are using JSON format, you don't have to worry about redesigning everything. You just write a new JSON render engine in a new programming language or framework. Here is an example:
 
 ## Documentation
 ### Usage
