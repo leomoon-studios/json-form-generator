@@ -41,7 +41,7 @@ class Form {
         if(in_array($data['type'], $inputTypes)){
             return $this->input($data);
         }else{
-            return $this->$data['type']($data);
+            return $this->{$data['type']}($data);
         }
     }
     /**
