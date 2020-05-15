@@ -25,7 +25,8 @@ Companies change their software every couple of years. If they have too many pag
         "title": "First name",
         "name":"firstName",
         "value": "test",
-        "required": true
+        "required": true,
+        "onChange":"console.log(this.value)"
       },
       "lastName": {
         "type": "input",
