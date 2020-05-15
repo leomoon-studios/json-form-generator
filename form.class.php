@@ -172,13 +172,13 @@ class Form {
      * @return string
      */
     public function button($data){
-        $tag .= '<button name="'.$data['name'].'" ';
+        $tag = '<button name="'.$data['name'].'" ';
         if(isset($data['class'])) $tag .= ' class="'.$data['class'].'"';
         if(isset($data['id'])) $tag .= ' id="'.$data['id'].'"';
         if(isset($data['onClick'])) $tag .= ' onclick="'.$data['onClick'].'"';
         if(isset($data['disabled'])) $tag .= ' disabled';
         if(isset($data['autofocus'])) $tag .= ' autofocus';
-        $tag .= $data['value'].'>';
+        $tag .= ">".$data['title'];
         $tag .= '</button>';
 
         return $tag;
