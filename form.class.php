@@ -192,7 +192,14 @@ class Form {
     public function render(){
         $data = $this->json;
         
-        $this->html = '<form name="'.$data['name'].'" method="'.$data['method'].'" action="'.$data['action'].'" >';
+        $this->html = '<form name="'.$data['name'].'" method="'.$data['method'].'" action="'.$data['action'].'"';
+        
+        if($data['enctype']){ $this->html .= ' enctype="'.$data['enctype'].'"'; }
+        if($data['target']){ $this->html .= ' target="'.$data['target'].'"'; }
+        if($data['autocomplete']){ $this->html .= ' autocomplete="'.$data['autocomplete'].'"'; }
+        
+        $this->html .= '>';
+        
         foreach($data['properties'] as $value){
             $this->html .= $this->parse($value);
         }
