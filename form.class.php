@@ -194,9 +194,9 @@ class Form {
         
         $this->html = '<form name="'.$data['name'].'" method="'.$data['method'].'" action="'.$data['action'].'"';
         
-        if($data['enctype']){ $this->html .= ' enctype="'.$data['enctype'].'"'; }
-        if($data['target']){ $this->html .= ' target="'.$data['target'].'"'; }
-        if($data['autocomplete']){ $this->html .= ' autocomplete="'.$data['autocomplete'].'"'; }
+        if(isset($data['enctype'])) $this->html .= ' enctype="'.$data['enctype'].'"'; 
+        if(isset($data['target'])) $this->html .= ' target="'.$data['target'].'"';
+        if(isset($data['autocomplete'])) $this->html .= ' autocomplete="'.$data['autocomplete'].'"'; 
         
         $this->html .= '>';
         
